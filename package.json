@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A boilerplate repository to get you started with Hardhat and Ethereum development",
   "scripts": {
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "fork": "npx hardhat node --fork https://sepolia.drpc.org",
+    "deploy-local": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy-sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "withdraw-local": "npx hardhat run scripts/withdraw.js --network localhost",
+    "withdraw-sepolia": "npx hardhat run scripts/withdraw.js --network sepolia"
   },
   "repository": {
     "type": "git",
@@ -28,5 +33,8 @@
     "hardhat": "^2.12.5",
     "hardhat-gas-reporter": "^1.0.9",
     "solidity-coverage": "^0.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }

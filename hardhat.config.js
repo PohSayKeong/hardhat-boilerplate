@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
 
 // The next line is part of the sample project, you don't need it in your
@@ -7,5 +8,18 @@ require("./tasks/faucet");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.17",
+    solidity: "0.8.17",
+    networks: {
+        sepolia: {
+            url: "https://sepolia.drpc.org",
+            accounts: {
+                mnemonic: process.env.MNEMONIC,
+            },
+        },
+        hardhat: {
+            accounts: {
+                mnemonic: process.env.MNEMONIC,
+            },
+        },
+    },
 };
