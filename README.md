@@ -12,6 +12,8 @@ Code can be found in `/contracts/Token.sol`
 the `transfer` event is also emitted when a transfer is made as this should happen for all token transfers
 
 ## Task 2
+Deployed contract address: `0x9b3fDf524E4e2704541c2069571DaB266D9Da6E0`
+
 hardhat config can be found in `/hardhat.config.js`
 
 Relevant scripts are found in `/scripts`
